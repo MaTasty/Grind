@@ -1,0 +1,10 @@
+# must consider all cases 
+class Solution:
+    def isFascinating(self, n: int) -> bool:
+        num2 = 2*n
+        num3 = 3*n
+        new = str(n)+str(num2)+str(num3)
+        if len(new)!=9: 
+            return False
+        numbers = collections.Counter(new)
+        return True if len(numbers)==9 and "0" not in numbers else False
